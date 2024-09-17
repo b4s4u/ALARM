@@ -16,7 +16,7 @@ public class Alarm {
 			while (true) {
 				synchronized (q) {
 					// If q is empty wait for an insertion
-					if (q.isEmpty()) {
+					while (q.isEmpty()) {
 						try {
 							System.out.println("waiting for insertion");
 							q.wait();
