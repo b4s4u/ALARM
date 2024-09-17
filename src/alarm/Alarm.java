@@ -31,7 +31,8 @@ public class Alarm {
 						System.out.println("Current Time: " + System.currentTimeMillis() + "Scheduled Time: " + t);
 					}
 					// if alarm time is not passed put a wait on the top element
-					// Note: I have added notifyAll when Insertion just to
+					// Note: I have added notifyAll in the schedule alarm method so that
+					// when the top element of the priority queue is changed we can revise the wait time aswell
 					else {
 						try {
 							System.out.println("waiting for timing out");
